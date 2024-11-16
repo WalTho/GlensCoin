@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "glens",
+	"version": "${version}",
+	"name": "Glens",
+	"description": "Adds a simple coin item to the game.",
+	"authors": [
+		"Walto"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/glens/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"glens.glens_coin.Glens"
+		],
+		"client": [
+			"glens.glens_coin.GlensClient"
+		]
+	},
+	"mixins": [
+		"glens.mixins.json",
+		{
+			"config": "glens.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
